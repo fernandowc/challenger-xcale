@@ -1,19 +1,18 @@
-package com.challenger.xcale.model;
+package com.challenger.xcale.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.challenger.xcale.model.Producto;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Carrito {
+@Getter
+@Setter
+public class CarroOrderResponse {
+
     String idCarrito;
     List<Producto> listaProductos;
-
     String accountId;
     double totalAmount;
     double totalTax;

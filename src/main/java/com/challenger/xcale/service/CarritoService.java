@@ -1,12 +1,13 @@
 package com.challenger.xcale.service;
 
+import com.challenger.xcale.dto.CarroOrderRequest;
 import com.challenger.xcale.model.Carrito;
-import com.challenger.xcale.model.Producto;
-
-import java.util.List;
+import java.util.Optional;
 
 
 public interface CarritoService {
 
-    Carrito nuevoCarrito(Carrito carrito);
+    Carrito buscarCarritoPorId(String idCarrito);
+    Carrito nuevoCarrito(CarroOrderRequest carrito);
+    Optional<Carrito> eliminarCarrito(String idCarrito);
 }
